@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PingMaster4000"
         mc:Ignorable="d"
-        Title="PingMaster4000" Height="600" Width="800" Background="#FF424AE8">
+        Title="PingMaster4000" Height="600" Width="800" Background="#FF424AE8" Icon="Ping.png">
     <Grid x:Name="controlGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -39,10 +39,11 @@
             </Grid.RowDefinitions>
             <!-- Elemente im inneren Grid -->
             <!-- Buttons im unteren Grid (Fussleiste controlGridButtons) -->
-            <Button Grid.Column="4" Grid.Row="1">Start</Button>
-            <Button Grid.Column="5" Grid.Row="1">Stop</Button>
-            <Button Grid.Column="6" Grid.Row="1">Remove</Button>
-            <Button Grid.Column="7" Grid.Row="1">Add</Button>
+            <Button Grid.Column="4" Grid.Row="1" x:Name="startButton">Start</Button>
+            <Button Grid.Column="5" Grid.Row="1" x:Name="stopButton">Stop</Button>
+            <Button Grid.Column="6" Grid.Row="1" x:Name="removeButton">Remove</Button>
+            <Button Grid.Column="7" Grid.Row="1" x:Name="addButton">Add</Button>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click">Close</Button>
         </Grid>
     </Grid>
 </Window>

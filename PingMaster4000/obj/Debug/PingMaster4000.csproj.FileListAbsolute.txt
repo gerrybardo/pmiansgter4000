@@ -12,3 +12,5 @@ C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster400
 C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csproj.GenerateResource.Cache
 C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.exe
 C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.pdb
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingBox.g.cs
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingBox.baml

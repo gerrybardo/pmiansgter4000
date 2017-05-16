@@ -16,23 +16,15 @@ using System.Windows.Shapes;
 namespace PingMaster4000
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für pingBox.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PingBox : UserControl
     {
-        PingBox pingPanel1;
-
-        public MainWindow()
+        public PingBox(string ipInfo)
         {
             InitializeComponent();
-
-            pingPanel1 = new PingBox("8.8.8.8");
-            pingStackpanel.Children.Add(pingPanel1);
+            ipInfoLabel.Text(ipInfo);
         }
 
-        private void closeButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
     }
 }
