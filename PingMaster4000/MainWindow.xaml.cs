@@ -24,5 +24,6 @@ namespace PingMaster4000
         {
             InitializeComponent();
         }
+
     }
 }

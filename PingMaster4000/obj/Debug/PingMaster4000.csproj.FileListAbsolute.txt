@@ -1,0 +1,14 @@
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\PingMaster4000.exe.config
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\PingMaster4000.exe
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\PingMaster4000.pdb
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csprojResolveAssemblyReference.cache
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\MainWindow.g.cs
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\App.g.cs
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000_MarkupCompile.cache
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000_MarkupCompile.lref
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\MainWindow.baml
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.g.resources
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.Properties.Resources.resources
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csproj.GenerateResource.Cache
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.exe
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.pdb
