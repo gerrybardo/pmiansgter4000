@@ -5,24 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PingMaster4000"
         mc:Ignorable="d"
-        Title="PingMaster4000" Height="600" Width="800" Background="White" Icon="Ping.png">
+        Title="PingMaster4000" Height="600" Width="800" Background="White" Icon="Ping.png" ResizeMode="NoResize">
     <Grid x:Name="controlGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="4.5*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <!-- Elemente im aeusseren Grid -->
+        <!-- Rechteck fuer die Hintergrundfarbe -->
+       <Rectangle x:Name="controlRectangle" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="800"  Grid.ColumnSpan="1" Grid.RowSpan="1" >
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.24"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFF0F0F0" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <!-- Label im Kopf des Fensters (oberste Zeile des Grid controlGrid) -->
-        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Name="controlLabel" FontWeight="Bold" FontSize="16" Background="{x:Null}">Control Unit PingMaster4000</Label>
-        <Rectangle Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="White" />
+        <Label Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  x:Name="controlLabel" FontWeight="Bold" FontSize="16" Content="Control Unit PingMaster4000" Foreground="#FFF96600">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.733"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                    <GradientStop Color="#FE7E7E7E"/>
+                    <GradientStop Color="#FF8C8C8C" Offset="0.987"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
         <!-- Stackpanel fuer Controlpanel in der Mitte -->
-        <StackPanel Grid.Column="0" Grid.Row="1" x:Name="pingStackpanel"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" x:Name="pingStackpanel">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.027"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+        </StackPanel>
         <!-- Grid in der Fussleiste (controlGridButtons fuer die Buttonzeile) -->
         <Grid x:Name="controlGridButtons" Grid.Row="2" Grid.Column="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.167"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
@@ -40,12 +72,13 @@
             </Grid.RowDefinitions>
             <!-- Elemente im inneren Grid -->
             <!-- Buttons im unteren Grid (Fussleiste controlGridButtons) -->
-            <Button Grid.Column="2" Grid.Row="1" x:Name="startButton">Start</Button>
-            <Button Grid.Column="3" Grid.Row="1" x:Name="stopButton">Stop</Button>
-            <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton">Remove</Button>
-            <Button Grid.Column="5" Grid.Row="1" x:Name="addButton">Add</Button>
-            <Button Grid.Column="7" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click">Close</Button>
-            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom">version 1.0</Label>
+            <Button Grid.Column="2" Grid.Row="1" x:Name="startButton" Content="Start"/>
+            <Button Grid.Column="3" Grid.Row="1" x:Name="stopButton" Content="Stop"/>
+            <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton" Content="Remove"/>
+            <Button Grid.Column="5" Grid.Row="1" x:Name="addButton" Content="Add"/>
+            <Button Grid.Column="7" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click" Content="Close"/>
+            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="version 1.0"/>
+            <Border BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="8" Grid.RowSpan="3" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Window>
