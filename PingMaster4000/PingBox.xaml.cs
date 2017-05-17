@@ -23,7 +23,7 @@ namespace PingMaster4000
         public PingBox(string ipInfo)
         {
             InitializeComponent();
-            ipInfoLabel.Text(ipInfo);
+            ipInfoLabel.Content = ipInfo;
         }
 
     }
