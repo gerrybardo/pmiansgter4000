@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -21,13 +20,21 @@ namespace PingMaster4000
     public partial class MainWindow : Window
     {
         PingBox pingPanel1;
+        string ipAddress, ipAddress2;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            pingPanel1 = new PingBox("8.8.8.8");
+            ipAddress = "8.8.8.8";
+            ipAddress2 = "8.8.4.4";
+            //Erstellt einen neuen Ping (PingBox) mit der IP-Adresse, dem Intervall in Sekunden und der Dauer fuer die Durchschnittsberechnung in Sekunden
+            pingPanel1 = new PingBox(ipAddress,1,60,50);
             pingStackpanel.Children.Add(pingPanel1);
+            pingPanel1 = new PingBox(ipAddress2,1,30,60);
+            pingStackpanel.Children.Add(pingPanel1);
+
+
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
