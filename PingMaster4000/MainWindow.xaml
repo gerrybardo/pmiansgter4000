@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PingMaster4000"
         mc:Ignorable="d"
-        Title="PingMaster4000" Height="600" Width="800" Background="#FF424AE8" Icon="Ping.png">
+        Title="PingMaster4000" Height="600" Width="800" Background="White" Icon="Ping.png">
     <Grid x:Name="controlGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -17,9 +17,10 @@
         </Grid.RowDefinitions>
         <!-- Elemente im aeusseren Grid -->
         <!-- Label im Kopf des Fensters (oberste Zeile des Grid controlGrid) -->
-        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Name="controlLabel" FontWeight="Bold" FontSize="16">Control Unit PingMaster4000</Label>
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Name="controlLabel" FontWeight="Bold" FontSize="16" Background="{x:Null}">Control Unit PingMaster4000</Label>
+        <Rectangle Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="White" />
         <!-- Stackpanel fuer Controlpanel in der Mitte -->
-        <StackPanel Grid.Column="0" Grid.Row="1" x:Name="pingStackpanel"></StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" x:Name="pingStackpanel"/>
         <!-- Grid in der Fussleiste (controlGridButtons fuer die Buttonzeile) -->
         <Grid x:Name="controlGridButtons" Grid.Row="2" Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -39,11 +40,12 @@
             </Grid.RowDefinitions>
             <!-- Elemente im inneren Grid -->
             <!-- Buttons im unteren Grid (Fussleiste controlGridButtons) -->
-            <Button Grid.Column="4" Grid.Row="1" x:Name="startButton">Start</Button>
-            <Button Grid.Column="5" Grid.Row="1" x:Name="stopButton">Stop</Button>
-            <Button Grid.Column="6" Grid.Row="1" x:Name="removeButton">Remove</Button>
-            <Button Grid.Column="7" Grid.Row="1" x:Name="addButton">Add</Button>
-            <Button Grid.Column="0" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click">Close</Button>
+            <Button Grid.Column="2" Grid.Row="1" x:Name="startButton">Start</Button>
+            <Button Grid.Column="3" Grid.Row="1" x:Name="stopButton">Stop</Button>
+            <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton">Remove</Button>
+            <Button Grid.Column="5" Grid.Row="1" x:Name="addButton">Add</Button>
+            <Button Grid.Column="7" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click">Close</Button>
+            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom">version 1.0</Label>
         </Grid>
     </Grid>
 </Window>
