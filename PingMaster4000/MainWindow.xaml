@@ -77,7 +77,7 @@
             <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton" Content="Remove"/>
             <Button Grid.Column="5" Grid.Row="1" x:Name="addButton" Content="Add"/>
             <Button Grid.Column="7" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click" Content="Close"/>
-            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="version 1.0"/>
+            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="version Aplha 1"/>
             <Border BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="8" Grid.RowSpan="3" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
