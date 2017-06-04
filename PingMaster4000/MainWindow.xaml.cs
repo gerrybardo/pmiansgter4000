@@ -21,6 +21,7 @@ namespace PingMaster4000
     {
         PingBox pingPanel1;
         string ipAddress, ipAddress2;
+        AddPing addPing;
 
         public MainWindow()
         {
@@ -35,6 +36,13 @@ namespace PingMaster4000
             pingStackpanel.Children.Add(pingPanel1);
 
 
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            addPing = new AddPing();
+            addPing.Activate();
+            addPing.Visibility = Visibility.Visible;
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)

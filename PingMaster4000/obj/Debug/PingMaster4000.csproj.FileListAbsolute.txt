@@ -30,3 +30,5 @@ C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingBox.baml
 C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.g.resources
 C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.Properties.Resources.resources
 C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csproj.GenerateResource.Cache
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\AddPing.g.cs
+C:\Users\Andi\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\AddPing.baml
