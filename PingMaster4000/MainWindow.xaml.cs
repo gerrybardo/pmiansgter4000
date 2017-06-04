@@ -47,7 +47,7 @@ namespace PingMaster4000
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

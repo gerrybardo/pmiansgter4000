@@ -22,5 +22,53 @@ namespace PingMaster4000
         {
             InitializeComponent();
         }
+
+        /*
+         *      Buttons & Texboxen
+         * 
+         */
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ipaddressTextbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            ipaddressTextbox.Clear();
+        }
+
+        private void ipaddressTextbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (ipaddressTextbox.Text == "")
+            {
+                ipaddressTextbox.Text = "Mandatory";
+            }
+        }
+
+        private void rangeTextbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (rangeTextbox.Text == "")
+            {
+                rangeTextbox.Text = "Default(Variable)";
+            }
+        }
+
+        private void rangeTextbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            rangeTextbox.Clear();
+        }
+
+        private void intervalTextbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            intervalTextbox.Clear();
+        }
+
+        private void intervalTextbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (intervalTextbox.Text == "")
+            {
+                intervalTextbox.Text = "Default(Variable)";
+            }
+        }
     }
 }

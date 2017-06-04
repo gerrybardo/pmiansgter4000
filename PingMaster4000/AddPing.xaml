@@ -64,7 +64,7 @@
             <!-- Inhalt Grid oben -->
             <Button x:Name="addPing" Grid.Column="5" Grid.Row="2">Add</Button>
             <Label x:Name="rangeLabel" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right">IP Adresse:</Label>
-            <TextBox x:Name="ipaddressTextbox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center">Mandatory</TextBox>
+            <TextBox x:Name="ipaddressTextbox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" GotFocus="ipaddressTextbox_GotFocus" LostFocus="ipaddressTextbox_LostFocus">Mandatory</TextBox>
             <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="7" Grid.RowSpan="4"/>
         </Grid>
         <!-- Inneres Grid Unten-->
@@ -92,9 +92,9 @@
             </Grid.RowDefinitions>
             <!-- Inhalt Grid unten -->
             <Label x:Name="rangeRange" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center">Range:</Label>
-            <TextBox x:Name="rangeTextbox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center">Default(Variable)</TextBox>
+            <TextBox x:Name="rangeTextbox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" LostFocus="rangeTextbox_LostFocus" GotFocus="rangeTextbox_GotFocus">Default(Variable)</TextBox>
             <Label x:Name="intervallRange" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">Interval:</Label>
-            <TextBox x:Name="intervalTextbox" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center">Default(Variable)</TextBox>
+            <TextBox x:Name="intervalTextbox" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center" GotFocus="intervalTextbox_GotFocus" LostFocus="intervalTextbox_LostFocus">Default(Variable)</TextBox>
         </Grid>
         <!-- Grid fuer optischen Abschluss unten -->
         <Grid x:Name="abschlussUnten" Grid.Column="0" Grid.Row="3">
@@ -104,6 +104,21 @@
                     <GradientStop Color="White" Offset="0.167"/>
                 </LinearGradientBrush>
             </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="1*"/>
+                <RowDefinition Height ="1*"/>
+                <RowDefinition Height ="2*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="closeButton" Grid.Column="6" Grid.Row="2" Click="closeButton_Click">Close</Button>
         </Grid>
     </Grid>
 </Window>
