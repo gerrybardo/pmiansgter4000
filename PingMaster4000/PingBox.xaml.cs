@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Net.NetworkInformation;
+using System.Data.SQLite;
 
 namespace PingMaster4000
 {
@@ -23,20 +24,27 @@ namespace PingMaster4000
     public partial class PingBox : UserControl
     {
         BackgroundWorker worker;
-        int intervalSeconds, avgRangeSeconds, acceptableAvg;
+        
+
+        int intervalSeconds, avgRangeSeconds, acceptableAvg, configId, autostart;
         string ipAddress;
         List<int> msList;
         bool cancellationPending;
 
-        public PingBox(string ipAddressParam, int intervalSecondsParam, int avgRangeSecondsParam, int acceptableAvgParam)
+        public PingBox( int configIdParam, string ipAddressParam, int intervalSecondsParam, int avgRangeSecondsParam, int acceptableAvgParam, int autostartParam)
         {
             InitializeComponent();
 
+            
             //Schreibt die Constructor Parameter in die globalen Variablen
             intervalSeconds = intervalSecondsParam;
             avgRangeSeconds = avgRangeSecondsParam;
             acceptableAvg = acceptableAvgParam;
             ipAddress = ipAddressParam;
+            configId = configIdParam;
+            autostart = autostartParam;
+
+     
 
             //Schreibt die IP in den Kopf des Moduls
             ipInfoLabelVal.Content = ipAddress;
@@ -58,13 +66,38 @@ namespace PingMaster4000
             //Der Backgroundworker darf seinen Progress reporten
             worker.WorkerReportsProgress = true;
             //Was soll bei einem Progressreport ausgefuehrt werden
-            worker.ProgressChanged +=WorkerProgressChanged;
+            worker.ProgressChanged += WorkerProgressChanged;
 
-            
-            //startPing();
+            if (autostart == 1)
+            {
+                startPing();
+            }
+
 
         }
 
+        public int getConfigId()
+        {
+            return configId;
+        }
+
+        public bool isChecked()
+        {
+            if (checkbox.IsChecked.HasValue && checkbox.IsChecked.Value) {
+                return true;
+            }
+            return false;
+        }
+
+        public void checkboxUnchecked()
+        {
+            checkbox.IsChecked = false;
+        }
+
+        public void checkboxChecked()
+        {
+            checkbox.IsChecked = true;
+        }
 
         /*
          *          ------ Methoden fuer Buttons ------
@@ -81,8 +114,14 @@ namespace PingMaster4000
 
         private void stopPingBox_Click(object sender, RoutedEventArgs e)
         {
+            stopPing();
+        }
+
+        public void stopPing()
+        {
             cancellationPending = true;
         }
+      
 
 
 
@@ -90,9 +129,10 @@ namespace PingMaster4000
          *
          *                  ----- Methoden zum Backgroundworker! -------
          *                  
-         *                  */
+         *                  
+         */
         //Prozedur zum Starten des Backgroundworkers
-        private void startPing()
+        public void startPing()
         {
             if (!worker.IsBusy)
             {
@@ -106,7 +146,7 @@ namespace PingMaster4000
                 runningLabelVal.Foreground = Brushes.Green;
             }
         }
-
+        
         //Arbeit des Backgroundworkers
         private void PingThisIp(object sender, DoWorkEventArgs e)
         {
@@ -120,6 +160,7 @@ namespace PingMaster4000
                     // Erzeuge Ping und speicher die Results weg
                     var ping = myPing.Send(ipAddress);
 
+                    
                     // Aufruf der UI Update mit String[] 
                     worker.ReportProgress(1, new string[] { ping.RoundtripTime.ToString(), ping.Status.ToString() });
                 }
@@ -146,6 +187,8 @@ namespace PingMaster4000
             pingStatusLabelVal.Foreground = Brushes.Black;
             avgMSValLabel.Content = "N/A";
         }
+
+     
 
         /*
          *      --- Methoden fuer Berechnungen
@@ -205,8 +248,6 @@ namespace PingMaster4000
         {
             //Variablen fuer durchschnittliche ms
             int avgMS = CalcUIValues(time, status);
-
-
             
             //Aktualisiert die Anzeige der Durchschnittsmillisekunden
             avgMSValLabel.Content = avgMS + "ms (" + avgRangeSeconds + "sec)";

@@ -20,9 +20,9 @@
         <Grid x:Name="abschlussOben" Grid.Column="0" Grid.Row="0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0.24"/>
+                    <GradientStop Color="#FF5D5D5D" Offset="0.983"/>
                     <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="#FFF0F0F0" Offset="1"/>
+                    <GradientStop Color="#FFF0F0F0" Offset="0.196"/>
                 </LinearGradientBrush>
             </Grid.Background>
         </Grid>
@@ -39,20 +39,22 @@
             </Label.Background>
         </Label>
         <!-- Stackpanel fuer Controlpanel in der Mitte -->
-        <StackPanel Grid.Column="0" Grid.Row="1" x:Name="pingStackpanel">
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="0.027"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-        </StackPanel>
+        <ScrollViewer Grid.Row="1" >
+            <StackPanel Grid.Column="0" Grid.Row="1" x:Name="pingStackpanel" Cursor="Arrow">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5D5D5D" Offset="0"/>
+                        <GradientStop Color="#FFBBBBBB" Offset="0.027"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+            </StackPanel>
+        </ScrollViewer>
         <!-- Grid in der Fussleiste (controlGridButtons fuer die Buttonzeile) -->
         <Grid x:Name="controlGridButtons" Grid.Row="2" Grid.Column="0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="White" Offset="0.167"/>
+                    <GradientStop Color="#FF5D5D5D"/>
+                    <GradientStop Color="#FFF7F7F7" Offset="0.874"/>
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.ColumnDefinitions>
@@ -72,13 +74,17 @@
             </Grid.RowDefinitions>
             <!-- Elemente im inneren Grid -->
             <!-- Buttons im unteren Grid (Fussleiste controlGridButtons) -->
-            <Button Grid.Column="2" Grid.Row="1" x:Name="startButton" Content="Start"/>
-            <Button Grid.Column="3" Grid.Row="1" x:Name="stopButton" Content="Stop"/>
-            <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton" Content="Remove"/>
+            <Button Grid.Column="2" Grid.Row="1" x:Name="startButton" Content="Start" Height="32" VerticalAlignment="Bottom" Click="startButton_Click"/>
+            <Button Grid.Column="3" Grid.Row="1" x:Name="stopButton" Content="Stop" Click="stopButton_Click"/>
+            <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton" Content="Remove" Click="removeButton_Click" />
             <Button Grid.Column="5" Grid.Row="1" x:Name="addButton" Content="Add" Click="addButton_Click"/>
             <Button Grid.Column="7" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click" Content="Close"/>
             <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="version Aplha 1"/>
             <Border BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="8" Grid.RowSpan="3" VerticalAlignment="Top"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="Select All:" HorizontalAlignment="Left"  VerticalAlignment="Center"  />
+            <CheckBox x:Name="checkall" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="86,9.5,0,9.5" Click="CheckBox_Click"/>
+
+
         </Grid>
     </Grid>
 </Window>

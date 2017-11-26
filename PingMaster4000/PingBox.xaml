@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PingMaster4000"
              mc:Ignorable="d" 
-             d:DesignHeight="69" d:DesignWidth="800" Background="#FFBBBBBB">
+             d:DesignHeight="69" d:DesignWidth="800" Background="#FF978282">
     <!-- Aufbau des Grids -->
     <Grid x:Name="pingGrid">
         <Grid.ColumnDefinitions>
@@ -22,8 +22,10 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <!-- Elemente des Grids -->
+
         <!-- Buttons fuer die Pingbox -->
         <Button x:Name="advancedButton" Grid.Column="5" Grid.Row="1" >Advanced</Button>
+       
         <!-- Grid fuer Start/Stop Buttons -->
         <Grid Grid.Row="2" Grid.Column="3">
             <Grid.ColumnDefinitions>
@@ -46,6 +48,7 @@
         <Label x:Name="avgMSValLabel" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">N/A</Label>
         <Label x:Name="pingStatusLabel" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">Pingstatus: </Label>
         <Label x:Name="pingStatusLabelVal" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold">N/A</Label>
-        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="6" Grid.RowSpan="3" Margin="-28.49,0,0,0"/>
+        <CheckBox x:Name="checkbox" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </UserControl>

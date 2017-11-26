@@ -44,7 +44,7 @@
                     <GradientStop Color="Black" Offset="0"/>
                     <GradientStop Color="#FFBBBBBB" Offset="0.027"/>
                 </LinearGradientBrush>
-                
+
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -62,7 +62,7 @@
                 <RowDefinition Height ="1*"/>
             </Grid.RowDefinitions>
             <!-- Inhalt Grid oben -->
-            <Button x:Name="addPing" Grid.Column="5" Grid.Row="2">Add</Button>
+            <Button x:Name="addPing" Grid.Column="5" Grid.Row="2" Click="addPing_Click">Add</Button>
             <Label x:Name="rangeLabel" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right">IP Adresse:</Label>
             <TextBox x:Name="ipaddressTextbox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" GotFocus="ipaddressTextbox_GotFocus" LostFocus="ipaddressTextbox_LostFocus">Mandatory</TextBox>
             <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="7" Grid.RowSpan="4"/>
@@ -95,6 +95,11 @@
             <TextBox x:Name="rangeTextbox" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" TextAlignment="Center" LostFocus="rangeTextbox_LostFocus" GotFocus="rangeTextbox_GotFocus">Default(Variable)</TextBox>
             <Label x:Name="intervallRange" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">Interval:</Label>
             <TextBox x:Name="intervalTextbox" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" TextAlignment="Center" GotFocus="intervalTextbox_GotFocus" LostFocus="intervalTextbox_LostFocus">Default(Variable)</TextBox>
+            <Label x:Name="timeError" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" >Warning at:</Label>
+            <TextBox x:Name="timeErrorTextbox" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" TextAlignment="Center" LostFocus="timeErrorTextbox_LostFocus" RenderTransformOrigin="0.768,3.059" GotFocus="timeErrorTextbox_GotFocus">Default(Variable)</TextBox>
+            <Label x:Name="autoStart" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,25,0" >Autostart:</Label>
+            <CheckBox x:Name="autoStartCheckbox" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Width="14" Margin="49.5,10,0,10" HorizontalContentAlignment="Center" Padding="0" Height="14" RenderTransformOrigin="6.692,0.556" Grid.ColumnSpan="2" />
+            <Label x:Name="errorMessage" Content="#Ungültige Eingabe" Grid.Column="4" HorizontalAlignment="Left" Margin="8,-82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,0.269" FontFamily="Arial" Background="{x:Null}" Foreground="Red" Grid.ColumnSpan="3" Width="122" Visibility="Hidden"/>
         </Grid>
         <!-- Grid fuer optischen Abschluss unten -->
         <Grid x:Name="abschlussUnten" Grid.Column="0" Grid.Row="3">
