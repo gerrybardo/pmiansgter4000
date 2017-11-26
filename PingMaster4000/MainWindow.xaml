@@ -79,7 +79,7 @@
             <Button Grid.Column="4" Grid.Row="1" x:Name="removeButton" Content="Remove" Click="removeButton_Click" />
             <Button Grid.Column="5" Grid.Row="1" x:Name="addButton" Content="Add" Click="addButton_Click"/>
             <Button Grid.Column="7" Grid.Row="2" x:Name="closeButton" Click="closeButton_Click" Content="Close"/>
-            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="version Aplha 1"/>
+            <Label Grid.Column="0" Grid.Row="2" x:Name="versionLabel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="version 0.1 Beta"/>
             <Border BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="8" Grid.RowSpan="3" VerticalAlignment="Top"/>
             <Label Grid.Column="0" Grid.Row="1" Content="Select All:" HorizontalAlignment="Left"  VerticalAlignment="Center"  />
             <CheckBox x:Name="checkall" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="86,9.5,0,9.5" Click="CheckBox_Click"/>

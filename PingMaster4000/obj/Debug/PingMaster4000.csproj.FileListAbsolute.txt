@@ -39,3 +39,26 @@ C:\Users\Christian\Desktop\Oliver Wawer\pmiansgter4000-master\PingMaster4000\bin
 C:\Users\Christian\Desktop\Oliver Wawer\pmiansgter4000-master\PingMaster4000\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\Christian\Desktop\Oliver Wawer\pmiansgter4000-master\PingMaster4000\bin\Debug\System.Data.SQLite.xml
 C:\Users\Christian\Desktop\Oliver Wawer\pmiansgter4000-master\PingMaster4000\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\PingMaster4000.exe.config
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\PingMaster4000.exe
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\PingMaster4000.pdb
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\System.Data.SQLite.dll
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\System.Data.SQLite.xml
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csprojResolveAssemblyReference.cache
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\AddPing.g.cs
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\MainWindow.g.cs
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingBox.g.cs
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\App.g.cs
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000_MarkupCompile.cache
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000_MarkupCompile.lref
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\AddPing.baml
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\MainWindow.baml
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingBox.baml
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.g.resources
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.Properties.Resources.resources
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csproj.GenerateResource.Cache
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.csproj.CoreCompileInputs.cache
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.exe
+C:\Users\andre\Source\Repos\pmiansgter4000\PingMaster4000\obj\Debug\PingMaster4000.pdb
